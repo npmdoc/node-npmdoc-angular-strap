@@ -1,1 +1,38 @@
-{     "devDependencies": {         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-angular-strap",     "homepage": "https://github.com/npmdoc/node-npmdoc-angular-strap",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-angular-strap.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [angular-strap (v2.3.12)](http://mgcrea.github.io/angular-strap)  [![npm package](https://img.shields.io/npm/v/npmdoc-angular-strap.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-angular-strap) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-angular-strap.svg)](https://travis-ci.org/npmdoc/node-npmdoc-angular-strap)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-angular-strap",
+    "keywords": [
+        "documentation",
+        "angular-strap"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_angular_strap.js",
+    "name": "npmdoc-angular-strap",
+    "nameAlias": "npmdoc_angular_strap",
+    "nameOriginal": "npmdoc-angular-strap",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-angular-strap.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
